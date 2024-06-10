@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить заметку</title>
+</head>
+<body>
+    <h1>Добавить заметку</h1>
+    <form action="{{ url_for('add_note') }}" method="post">
+        <label for="title">Заголовок:</label>
+        <input type="text" id="title" name="title" required>
+        <br>
+        <label for="description">Описание:</label>
+        <input type="text" id="description" name="description" required>
+        <br>
+        <label for="content">Текст заметки:</label>
+        <textarea id="content" name="content" required></textarea>
+        <br>
+        <button type="submit">Добавить</button>
+    </form>
+    <a href="{{ url_for('index') }}">Вернуться к списку заметок</a>
+</body>
+</html>

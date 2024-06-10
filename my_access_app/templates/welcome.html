@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приветствие</title>
+</head>
+<body>
+    <h1>Добро пожаловать!</h1>
+
+    {% if role == 'admin' %}
+        <p>Вы администратор. У вас есть полный доступ к системе.</p>
+    {% elif role == 'moderator' %}
+        <p>Вы модератор. Вы можете редактировать записи и комментарии.</p>
+    {% elif role == 'user' %}
+        <p>Вы рядовой пользователь. Вы можете создавать записи от своего имени и просматривать френдленту.</p>
+    {% else %}
+        <p>У вас нет специальных привилегий.</p>
+    {% endif %}
+</body>
+</html>
